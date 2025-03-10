@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+body{
+  background: #fff;
+}
+@font-face {
+  font-family: 'Parkinsans';
+  src: url('/fonts/Parkinsans-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Parkinsans';
+  src: url('/fonts/Parkinsans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Parkinsans';
+  src: url('/fonts/Parkinsans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Parkinsans';
+  src: url('/fonts/Parkinsans-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Parkinsans';
+  src: url('/fonts/Parkinsans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+h1, h2, h3, h4, h5, h6, p, a, button {
+  font-family: 'Parkinsans', sans-serif;
+}

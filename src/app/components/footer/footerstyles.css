@@ -1,0 +1,65 @@
+.inner_footer{
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
+    padding: 60px;
+    background: #e9dcea;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    gap: 70px;
+}
+.c_one{
+    width: 35%;
+}
+.footer_logo img{
+    margin-bottom: 20px;
+}
+.inner_second_footer{
+    width: 65%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.socials_div{
+    gap: 12px;
+    margin-bottom: 14px;
+}
+.excellence_list{
+    margin-bottom: 14px;
+}
+.for_patients{
+    margin-bottom: 14px;
+}
+@media (max-width:768px) {
+    .inner_footer{
+        flex-direction: column;
+        padding: 30px;
+    }
+    .c_one{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer_logo img{
+        margin: auto;
+    }
+
+    .inner_second_footer{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .inner_footer{
+        gap: 40px;
+    }
+    .footer_description{
+        text-align: center;
+    }
+}
+p{
+    color: #000;
+}
