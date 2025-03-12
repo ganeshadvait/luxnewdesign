@@ -36,11 +36,11 @@
     flex-direction: column;
 }
 .hero_image{
-    position: absolute;
-    top: -65px;
-    right: 0;
+    position: relative !important;
+    height: 400px;
     width: 100%;
-    height: auto;
+    top: unset;
+    margin-top: -80px;
 }
 @media (max-width: 768px) {
     .hero_section{
