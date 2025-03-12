@@ -19,7 +19,7 @@ export default function Header() {
 
     return (
         <section className="header">
-            <div class="header__logos">
+            <div className="header__logos">
     <a href="/"><img className="header__logo" src="/lux logo final .png" /></a>
     <a href="/"><img className="header__logotwo" src="/nabh.png" /></a>
     <a href="/"><img className="header__logothree" src="/trail.png" /></a>
