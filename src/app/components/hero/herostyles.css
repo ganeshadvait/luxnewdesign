@@ -37,9 +37,15 @@
     flex-direction: column;
 }
 .hero_image{
+<<<<<<< HEAD
     right: 0;
+=======
+    position: relative !important;
+    height: 400px;
+>>>>>>> 6e5bd99972386046cd946c4f3f42496ed7f47c0c
     width: 100%;
-    height: auto;
+    top: unset;
+    margin-top: -65px;
 }
 @media (max-width: 768px) {
     .hero_section{
@@ -77,4 +83,6 @@
     .hero_section {
        padding: 24px 0 0 0;
     }
+     .hero_image{
+         display:none;
 }
