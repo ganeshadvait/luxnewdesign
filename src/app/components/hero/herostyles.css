@@ -37,15 +37,9 @@
     flex-direction: column;
 }
 .hero_image{
-<<<<<<< HEAD
-    right: 0;
-=======
-    position: relative !important;
-    height: 400px;
->>>>>>> 6e5bd99972386046cd946c4f3f42496ed7f47c0c
-    width: 100%;
-    top: unset;
-    margin-top: -65px;
+ width: 100%;
+ position: relative !important;
+ margin-top: -88px;
 }
 @media (max-width: 768px) {
     .hero_section{
@@ -72,6 +66,8 @@
 @media (max-width:475px) {
     .hero_title {
         font-size: 1.5rem;
+        margin-top: 0;
+        margin-bottom: 0;
     }
     .list_items_hero{
         padding: 0 20px 0 20px;
@@ -85,4 +81,9 @@
     }
      .hero_image{
          display:none;
+}
+.hero_section{
+
+    border-radius: 20px;
+}
 }

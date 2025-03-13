@@ -1,9 +1,14 @@
 "use client";
 import './herostyles.css';
+import { useInView } from "react-intersection-observer";
 import Image from 'next/image';
 import React from 'react';  
-import LazyLoad from 'react-lazyload';
 export default function Hero () {
+    const { ref, inView } = useInView({
+        triggerOnce: true, 
+        threshold: 0.1, 
+    });
+
     const heroContent = {
         title: 'Best Piles Treatment in Hyderabad',
         heroImage : '/happy patient.svg',
@@ -20,18 +25,18 @@ export default function Hero () {
         <section className='hero_section'>
         <h1 className='hero_title'>{heroContent.title}</h1>  
            <div className='hero_content flex flex-wrap'>
-            <div className="left_hero"> 
-                <LazyLoad fill>
-                <img src={heroContent.heroImage} alt="Lazy loaded" className='hero_image' />
-                 </LazyLoad>
-                 
+            <div className="left_hero">                 
+                <Image src={heroContent.heroImage} alt="Lazy loaded" className='hero_image' fill />                 
             </div>
-            <div className="right_hero">
-            <ul className='list_items_hero'>
-                    {heroContent.descList.map((desc, index) => (
-                        <li className='list_item_hero' key={index}>{desc}</li>
-                    ))}
-                </ul>
+            <div className="right_hero" ref={ref}>
+            {inView && (
+                <ul className='list_items_hero' lazyload="true" >
+                {heroContent.descList.map((desc, index) => (
+                    <li className='list_item_hero' key={index}>{desc}</li>
+                ))}
+            </ul>
+            )}
+            
             </div>
            </div>
         </section>
