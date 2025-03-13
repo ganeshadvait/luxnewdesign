@@ -14,7 +14,8 @@
 }
 .hero_content{
     display: flex;
-    justify-content: center;    
+    justify-content: center;  
+    align-items: end;  
 }
 .left_hero{
     width: 50%;
@@ -36,8 +37,6 @@
     flex-direction: column;
 }
 .hero_image{
-    position: absolute;
-    top: -65px;
     right: 0;
     width: 100%;
     height: auto;

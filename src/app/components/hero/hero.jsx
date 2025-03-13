@@ -1,5 +1,8 @@
+"use client";
 import './herostyles.css';
 import Image from 'next/image';
+import React from 'react';  
+import LazyLoad from 'react-lazyload';
 export default function Hero () {
     const heroContent = {
         title: 'Best Piles Treatment in Hyderabad',
@@ -18,9 +21,10 @@ export default function Hero () {
         <h1 className='hero_title'>{heroContent.title}</h1>  
            <div className='hero_content flex flex-wrap'>
             <div className="left_hero"> 
-            <Image src={heroContent.heroImage} alt="Logo" fill  className='hero_image'
-            LazyLoad={true}
-            />
+                <LazyLoad fill>
+                <img src={heroContent.heroImage} alt="Lazy loaded" className='hero_image' />
+                 </LazyLoad>
+                 
             </div>
             <div className="right_hero">
             <ul className='list_items_hero'>
