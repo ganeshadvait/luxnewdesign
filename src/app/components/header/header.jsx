@@ -1,44 +1,34 @@
+"use client";
 import Link from "next/link";
+import { useInView } from "react-intersection-observer";
 import "./headerstyles.css";
 
 export default function Header() {
-    const logos = [
-        "/lux logo final .png",
-        "/nabh.png",
-        "/trail.png",
-    ];
-
-    const menuItems = [
-        { id: 1, name: "Home", url: "/" },
-        { id: 2, name: "About", url: "/about" },
-        { id: 3, name: "Services", url: "/services" },
-        { id: 4, name: "Contact", url: "/contact" },
-    ];
-
-    const cta = { name: "+91123456789", url: "/get-started" };
+    const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
     return (
-        <section className="header">
-            <div className="header__logos">
-    <a href="/"><img className="header__logo" src="/lux logo final .png" /></a>
-    <a href="/"><img className="header__logotwo" src="/nabh.png" /></a>
-    <a href="/"><img className="header__logothree" src="/trail.png" /></a>
-</div>
+        <header className="header">
+            
+            <div className="header__logos" ref={ref}>
+                <a href="/"><img className={`logo-fade header__logo ${inView ? "fade-in" : "opacity-0"}`} src="/lux logo final .png" /></a>
+    <a href="/"><img className={`logo-fade header__logotwo ${inView ? "fade-in" : "opacity-0"}`} src="/nabh.png" /></a>
+    <a href="/"><img className={`logo-fade header__logothree ${inView ? "fade-in" : "opacity-0"}`} src="/trail.png" /></a>
+            </div>
 
-
+           
             <nav className="header__menu">
                 <ul>
-                    {menuItems.map((item) => (
-                        <li key={item.id}>
-                            <Link href={item.url}>{item.name}</Link>
-                        </li>
-                    ))}
+                    <li><Link href="/">Home</Link></li>
+                    <li><Link href="/about">About</Link></li>
+                    <li><Link href="/services">Services</Link></li>
+                    <li><Link href="/contact">Contact</Link></li>
                 </ul>
             </nav>
 
+          
             <div className="header__cta">
-                <Link href={cta.url} className="header_cta_type_one">{cta.name}</Link>
+                <Link href="/get-started" className="header_cta_type_one">+91123456789</Link>
             </div>
-        </section>
+        </header>
     );
 }

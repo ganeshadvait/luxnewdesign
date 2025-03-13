@@ -26,7 +26,7 @@ export default function Hero () {
         <h1 className='hero_title'>{heroContent.title}</h1>  
            <div className='hero_content flex flex-wrap'>
             <div className="left_hero">                 
-                <Image src={heroContent.heroImage} alt="Lazy loaded" className='hero_image' fill />                 
+                <Image src={heroContent.heroImage} alt="Lazy loaded"  className={`logo-fade hero_image ${inView ? "fade-in" : "opacity-0"}`} fill />                 
             </div>
             <div className="right_hero" ref={ref}>
             {inView && (

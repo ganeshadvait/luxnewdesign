@@ -118,3 +118,11 @@
         height: 60px;
     }
 }
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+  }
+  .opacity-0 {
+    opacity: 0;
+  }
+  
