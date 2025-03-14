@@ -33,10 +33,12 @@
 }
 .footer{
     height: 380px;
+    min-height: 400px;
 }
 @media (max-width:768px) {
     .footer{
         height: 100vh;
+        min-height: 100%;
     }
     .inner_footer{
         flex-direction: column;

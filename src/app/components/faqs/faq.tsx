@@ -21,9 +21,9 @@ export default function Faqs() {
     <section className="faqs_section" ref={ref}>
       {inView && (
         <>
-          <h3 className="text-[#252B61] mt-4 mb-8 text-center faq_title">
+          <h2 className="text-[#252B61] mt-4 mb-8 text-center faq_title">
             FAQ’s (Frequently Asked Questions)
-          </h3>
+          </h2>
           <div className={`faq_wrapper inner_section ${inView ? "fade-in" : "opacity-0"}`}>
             {faqs.map((faq, index) => (
               <div
