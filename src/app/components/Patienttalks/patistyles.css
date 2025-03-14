@@ -1,0 +1,29 @@
+.patient_section{
+    width: 90%;
+    margin: 60px auto 0;
+}
+
+.video_box{
+    width: 400px;
+    height: 100%;
+    min-height: 290px;
+    min-width: 320px;
+    border-radius: 20px;
+}
+.videos_boxex{
+    height: 320px;
+    min-height: 320px;
+    padding-bottom: 30px;
+}
+.videos_boxex::-webkit-scrollbar{
+    display: none;
+}
+@media (max-width:475px) {
+    .video_box {
+        width: 345px;
+        height: 100%;
+        min-height: 280px;
+        min-width: 320px;
+        border-radius: 20px;
+    }
+}
