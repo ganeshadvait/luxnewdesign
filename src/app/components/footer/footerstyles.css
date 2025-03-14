@@ -31,7 +31,13 @@
 .for_patients{
     margin-bottom: 14px;
 }
+.footer{
+    height: 380px;
+}
 @media (max-width:768px) {
+    .footer{
+        height: 100vh;
+    }
     .inner_footer{
         flex-direction: column;
         padding: 30px;
