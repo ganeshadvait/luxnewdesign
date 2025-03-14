@@ -31,7 +31,7 @@ const FooterComponent = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
-    <section className="footer bg-white w-full py-8" ref={ref}>
+    <section className="footer bg-white" ref={ref}>
       <div className="inner_footer">
        
         <div className="column c_one">
