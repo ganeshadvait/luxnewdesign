@@ -18,40 +18,45 @@ export default function Faqs() {
   ];
 
   return (
-    <section className="faqs_section">
-      <h3 className="text-[#252B61] mt-4 mb-8 text-center faq_title">FAQ’s (Frequently Asked Questions)</h3>
-      <div ref={ref} className={`faq_wrapper inner_section ${inView ? "fade-in" : "opacity-0"}`}>
-        {faqs.map((faq, index) => (
-          <div
-            key={index}
-            className={`accordion ${activeIndex === index ? "active" : ""}`}
-            onClick={() => toggleAccordion(index)}
-          >
-            {/* Accordion Header */}
-            <div className="accordion_head">
-              <span>{faq.question}</span>
-              <p
-                className={`icon ${activeIndex === index ? "rotate" : ""}`}
+    <section className="faqs_section" ref={ref}>
+      {inView && (
+        <>
+          <h3 className="text-[#252B61] mt-4 mb-8 text-center faq_title">
+            FAQ’s (Frequently Asked Questions)
+          </h3>
+          <div className={`faq_wrapper inner_section ${inView ? "fade-in" : "opacity-0"}`}>
+            {faqs.map((faq, index) => (
+              <div
+                key={index}
+                className={`accordion ${activeIndex === index ? "active" : ""}`}
+                onClick={() => toggleAccordion(index)}
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
-                  <path stroke="currentColor" d="M13.5 5.5 8 11 2.5 5.5" />
-                </svg>
-              </p>
-            </div>
+                {/* Accordion Header */}
+                <div className="accordion_head">
+                  <span>{faq.question}</span>
+                  <p className={`icon ${activeIndex === index ? "rotate" : ""}`}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                      <path stroke="currentColor" d="M13.5 5.5 8 11 2.5 5.5" />
+                    </svg>
+                  </p>
+                </div>
 
-            <div
-              className="accordion_content"
-              style={{
-                maxHeight: activeIndex === index ? "200px" : "0px",
-                opacity: activeIndex === index ? 1 : 0,
-                transform: activeIndex === index ? "translateY(0)" : "translateY(-10px)",
-              }}
-            >
-              <p className="faq_answer">{faq.answer}</p>
-            </div>
+                {/* Accordion Content */}
+                <div
+                  className="accordion_content"
+                  style={{
+                    maxHeight: activeIndex === index ? "200px" : "0px",
+                    opacity: activeIndex === index ? 1 : 0,
+                    transform: activeIndex === index ? "translateY(0)" : "translateY(-10px)",
+                  }}
+                >
+                  <p className="faq_answer">{faq.answer}</p>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+        </>
+      )}
     </section>
   );
 }

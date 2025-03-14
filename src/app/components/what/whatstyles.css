@@ -1,0 +1,13 @@
+.whatare{
+    width: 85%;
+    margin: 40px auto;
+    background: #fff;
+}
+@media (max-width:768px) {
+    .whatare{
+        width: 90%;
+    }
+    .whatarepara{
+        font-size: 14px;
+    }
+}
