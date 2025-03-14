@@ -5,7 +5,7 @@ import { InView } from "react-intersection-observer";
 
 export default function Whatare() {
   return (
-    <section className=" md:px-12 lg:px-20 text-[#252B61] whatare">
+    <section className=" lg:px-20 text-[#252B61] whatare">
       {/* Heading */}
       <h2 className="text-xl md:text-2xl font-500 mb-4">What Are Piles / Hemorrhoids?</h2>
       <p className="text-gray-700 mb-6 leading-[2em] whatarepara">
