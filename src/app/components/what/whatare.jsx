@@ -1,11 +1,15 @@
 'use client';
 import React from "react";
 import './whatstyles.css';
-import { InView } from "react-intersection-observer";
+import { useInView } from "react-intersection-observer";
 
 export default function Whatare() {
+  const { ref, inView } = useInView({
+    triggerOnce: true, 
+    threshold: 0.1, 
+});
   return (
-    <section className=" lg:px-20 text-[#252B61] whatare">
+    <section className={`logo-fade hero_image lg:px-20 text-[#252B61] whatare ${inView ? "fade-in" : "opacity-0"}`}>
       {/* Heading */}
       <h2 className="text-xl md:text-2xl font-500 mb-4">What Are Piles / Hemorrhoids?</h2>
       <p className="text-gray-700 mb-6 leading-[2em] whatarepara">
