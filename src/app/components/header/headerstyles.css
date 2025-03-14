@@ -120,3 +120,12 @@
 }
 
   
+.header__logotwo {
+   
+    aspect-ratio: 1 / 1; /* Square image clearly (1:1) */
+  }
+  
+  .header__logothree {
+   
+    aspect-ratio: 42 / 30; /* Actual aspect ratio of trail.png: e.g., 42px width x 30px height */
+  }
