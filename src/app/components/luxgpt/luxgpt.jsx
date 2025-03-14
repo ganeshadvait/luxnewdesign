@@ -9,7 +9,9 @@ export default function Luxgpt () {
     });
     return(
         <>
-        <section className= {` Luxgpt_section ${inView ? "fade-in" : "opacity-0"}`}>
+        <section 
+        ref={ref} 
+        className= {` Luxgpt_section ${inView ? "fade-in" : "opacity-0"}`}>
       
       <div className="md:w-1/2 text-center md:text-left left_Container">
         <h2 className="text_luxgot font-500">
