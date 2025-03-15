@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import FooterComponent from "./components/footer/footer";
 import Header from './components/header/header';
-import Head from 'next/head'
+// import Head from 'next/head'
 
 export const metadata: Metadata = {
   title: "Lux New Design",
