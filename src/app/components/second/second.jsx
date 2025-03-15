@@ -45,7 +45,7 @@ export default function Second() {
         if (inView) {
             const timer = setTimeout(() => {
                 setShowImages(true);
-            }, 1500); // Delay image load by 1.5 seconds
+            }, 2000); 
 
             return () => clearTimeout(timer);
         }
