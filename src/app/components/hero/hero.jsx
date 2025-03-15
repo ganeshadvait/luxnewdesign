@@ -27,7 +27,7 @@ export default function Hero () {
         className={`hero_section ${inView ? "fade-in" : "opacity-0"}`}>
         <h1
         
-     className={`hero_title ${inView ? "fade-in" : "opacity-0"}`}>{heroContent.title}</h1>  
+     className="fade-up hero_title">{heroContent.title}</h1>  
            <div className='hero_content flex flex-wrap'>
             <div className="left_hero">                 
                 <Image src={heroContent.heroImage} alt="Lazy loaded"  className={`logo-fade hero_image ${inView ? "fade-in" : "opacity-0"}`} fill />                 

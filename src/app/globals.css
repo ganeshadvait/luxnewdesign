@@ -67,3 +67,9 @@ ul, tbody, th, table{
 .opacity-0 {
   opacity: 0;
 }
+.fade-up{
+ 
+    opacity: 1;
+    transition: opacity 0.2s ease-in;
+  }
+  
