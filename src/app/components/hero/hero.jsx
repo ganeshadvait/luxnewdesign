@@ -6,7 +6,7 @@ import React from 'react';
 export default function Hero () {
     const { ref, inView } = useInView({
         triggerOnce: true, 
-        threshold: 0.1, 
+        threshold: 0.01, 
     });
 
     const heroContent = {
@@ -23,7 +23,9 @@ export default function Hero () {
     return (
         <>
         <section className='hero_section'>
-        <h1 className='hero_title'>{heroContent.title}</h1>  
+        <h1
+        ref={ref}
+     className={`hero_title ${inView ? "fade-in" : "opacity-0"}`}>{heroContent.title}</h1>  
            <div className='hero_content flex flex-wrap'>
             <div className="left_hero">                 
                 <Image src={heroContent.heroImage} alt="Lazy loaded"  className={`logo-fade hero_image ${inView ? "fade-in" : "opacity-0"}`} fill />                 

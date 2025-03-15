@@ -7,7 +7,7 @@ import { useInView } from 'react-intersection-observer';
 export default function Second() {
     const { ref, inView } = useInView({
         triggerOnce: true, 
-        threshold: 0.1, 
+        threshold: 0.01, 
     });
     const services = [
         {
