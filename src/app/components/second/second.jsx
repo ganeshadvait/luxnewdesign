@@ -1,14 +1,9 @@
 "use client";
-import { useInView } from "react-intersection-observer";
 import Image from 'next/image';
 import React from 'react';
 import './sstyles.css';
 
 export default function Second() {
-    const { ref, inView } = useInView({
-        triggerOnce: true, 
-        threshold: 0.1, 
-    });
     const services = [
         {
             image: "/book an appointment.png",
@@ -39,20 +34,13 @@ export default function Second() {
             arrow: "/Arrow.svg"
         }
     ];
-    
 
     return (
-        <section 
-            ref={ref} 
-            className={`second_section grid grid-cols-2 md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 ${inView ? "fade-in" : "opacity-0"}`}
-        >
+        <section className="second_section grid grid-cols-2 md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 fade-in">
             {services.map((service, index) => (
-                <div key={index} className={`sessioncards rounded-xl overflow-hidden shadow-lg ${service.bgColor} `}>
-                    <div
-                   
-                    className=  "relative w-full h-45">
+                <div key={index} className={`sessioncards rounded-xl overflow-hidden shadow-lg ${service.bgColor}`}>
+                    <div className="relative w-full h-45">
                         <Image 
-                    
                             src={service.image} 
                             alt={service.title} 
                             layout="fill" 
@@ -63,10 +51,9 @@ export default function Second() {
                     </div>
                     <div className="p-4 flex content_Card">
                         <div>
-                        <h2 className="service_title font-semibold">{service.title}</h2>
-                        <p className="service_description text-gray-600">{service.description}</p>
+                            <h2 className="service_title font-semibold">{service.title}</h2>
+                            <p className="service_description text-gray-600">{service.description}</p>
                         </div>
-                       
                         <div>
                             <Image src={service.arrow} alt="arrow-buttons" width={55} height={55}/>
                         </div>
