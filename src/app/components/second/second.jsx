@@ -45,7 +45,10 @@ export default function Second() {
         ref={ref}
         className= {`second_section grid grid-cols-2 md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 fade-in ${inView ? "fade-in" : "opacity-0"}`}>
             {services.map((service, index) => (
-                <div key={index} className={`sessioncards rounded-xl overflow-hidden shadow-lg ${service.bgColor}`}>
+                <div key={index}
+                ref={ref}
+                className={`sessioncards rounded-xl overflow-hidden shadow-lg ${service.bgColor} transition-opacity duration-700 ease-out 
+            ${inView ? `opacity-100 delay-${index * 200}` : "opacity-0"}`}>
                     <div className="relative w-full h-45">
                     <Image 
     src={service.image} 
