@@ -39,6 +39,17 @@ export default function Second() {
             arrow: "/Arrow.svg"
         }
     ];
+    const [showImages, setShowImages] = useState(false);
+
+    useEffect(() => {
+        if (inView) {
+            const timer = setTimeout(() => {
+                setShowImages(true);
+            }, 1500); // Delay image load by 1.5 seconds
+
+            return () => clearTimeout(timer);
+        }
+    }, [inView]);
 
     return (
         <section
@@ -50,15 +61,15 @@ export default function Second() {
                 className={`sessioncards rounded-xl overflow-hidden shadow-lg ${service.bgColor} transition-opacity duration-700 ease-out 
             ${inView ? `opacity-100 delay-${index * 200}` : "opacity-0"}`}>
                     <div className="relative w-full h-45">
-                    <Image 
-                    ref={ref}
-    src={service.image} 
-    alt={service.title} 
-    layout="fill" 
-    objectFit="cover"
-    className={`rounded-t-lg ${inView ? "fade-in" : "opacity-0"}`}
-    
-/>
+                    {showImages && (
+                <Image
+                    src="/your-image.png"
+                    alt="Delayed Image"
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-t-lg fade-in"
+                />
+            )}
 
                     </div>
                     <div className="p-4 flex content_Card">
