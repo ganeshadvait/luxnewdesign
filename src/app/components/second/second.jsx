@@ -62,12 +62,12 @@ export default function Second() {
                     </div>
                     <div className="p-4 flex content_Card">
                         <div>
-                        <h3 className="service_title font-semibold">{service.title}</h3>
+                        <h2 className="service_title font-semibold">{service.title}</h2>
                         <p className="service_description text-gray-600">{service.description}</p>
                         </div>
                        
                         <div>
-                            <Image src={service.arrow}  width={55} height={55}/>
+                            <Image src={service.arrow} alt="arrow-buttons" width={55} height={55}/>
                         </div>
                     </div>
                 </div>

@@ -30,12 +30,21 @@ export default function PatientTalks() {
       <h2 className="text-3xl sm:2xl font-500 text-gray-900">Patients Love Us</h2>
 
       <div className="relative mt-6 ">
-        <button
-          onClick={scrollLeft}
-          className="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow-md p-2 rounded-full z-10 left_button"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path stroke="currentColor" d="M10.5 2.5 5 8l5.5 5.5"/></svg>
-        </button>
+      <button
+  onClick={scrollLeft}
+  className="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow-md p-2 rounded-full z-10 left_button"
+  aria-label="Scroll Left"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="16"
+    height="16"
+    fill="none"
+    viewBox="0 0 16 16"
+  >
+    <path stroke="currentColor" d="M10.5 2.5 5 8l5.5 5.5" />
+  </svg>
+</button>
 
         <div
           ref={scrollRef}
@@ -47,11 +56,20 @@ export default function PatientTalks() {
         </div>
 
         <button
-          onClick={scrollRight}
-          className="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow-md p-2 rounded-full z-10 left_button"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path stroke="currentColor" d="M5.5 2.5 11 8l-5.5 5.5"/></svg>
-        </button>
+  onClick={scrollRight}
+  className="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow-md p-2 rounded-full z-10 right_button"
+  aria-label="Scroll Right"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="16"
+    height="16"
+    fill="none"
+    viewBox="0 0 16 16"
+  >
+    <path stroke="currentColor" d="M5.5 2.5 11 8l-5.5 5.5" />
+  </svg>
+</button>
       </div>
     </section>
   );
