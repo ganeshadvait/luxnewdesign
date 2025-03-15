@@ -43,11 +43,7 @@ export default function Second() {
 
     useEffect(() => {
         if (inView) {
-            const timer = setTimeout(() => {
-                setShowImages(true);
-            }, 2000); 
-
-            return () => clearTimeout(timer);
+            setShowImages(true);
         }
     }, [inView]);
 
@@ -63,11 +59,15 @@ export default function Second() {
                     <div className="relative w-full h-45">
                     {showImages && (
                 <Image
+                ref={ref}
                 src={service.image} 
                 alt={service.title} 
                     layout="fill"
                     objectFit="cover"
                     className="rounded-t-lg fade-in"
+                    priority // Forces early load
+    fetchPriority="high" // Tells browser to load ASAP
+    loading="eager"
                 />
             )}
 
