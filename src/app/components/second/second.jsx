@@ -52,11 +52,12 @@ export default function Second() {
                     ref={ref}
                     className= {`relative w-full h-45 ${inView ? "fade-in" : "opacity-0"}`}>
                         <Image 
+                        ref={ref}
                             src={service.image} 
                             alt={service.title} 
                             layout="fill" 
                             objectFit="cover" 
-                            className="rounded-t-lg"
+                            className={`rounded-t-lg ${inView ? "fade-in" : "opacity-0"}`}
                         />
                     </div>
                     <div className="p-4 flex content_Card">
