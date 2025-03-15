@@ -47,14 +47,17 @@ export default function Second() {
             {services.map((service, index) => (
                 <div key={index} className={`sessioncards rounded-xl overflow-hidden shadow-lg ${service.bgColor}`}>
                     <div className="relative w-full h-45">
-                        <Image 
-                            src={service.image} 
-                            alt={service.title} 
-                            layout="fill" 
-                            objectFit="cover" 
-                            priority
-                            className="rounded-t-lg"
-                        />
+                    <Image 
+    src={service.image} 
+    alt={service.title} 
+    width={300} 
+    height={200} 
+    objectFit="cover"
+    className="rounded-t-lg"
+    priority={index === 0} 
+    loading={index === 0 ? "eager" : "lazy"} 
+/>
+
                     </div>
                     <div className="p-4 flex content_Card">
                         <div>
