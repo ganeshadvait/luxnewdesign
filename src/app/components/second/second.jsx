@@ -7,7 +7,7 @@ import { useInView } from 'react-intersection-observer';
 export default function Second() {
     const { ref, inView } = useInView({
         triggerOnce: true, 
-        threshold: 0.01, 
+        threshold: 0.1, 
     });
     const services = [
         {
@@ -51,13 +51,13 @@ export default function Second() {
             ${inView ? `opacity-100 delay-${index * 200}` : "opacity-0"}`}>
                     <div className="relative w-full h-45">
                     <Image 
+                    ref={ref}
     src={service.image} 
     alt={service.title} 
     layout="fill" 
     objectFit="cover"
-    className="rounded-t-lg"
-    priority={index === 0} 
-    loading={index === 0 ? "eager" : "lazy"} 
+    className={`rounded-t-lg ${inView ? "fade-in" : "opacity-0"}`}
+    
 />
 
                     </div>

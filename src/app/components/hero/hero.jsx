@@ -6,7 +6,7 @@ import React from 'react';
 export default function Hero () {
     const { ref, inView } = useInView({
         triggerOnce: true, 
-        threshold: 0.01, 
+        threshold: 0.1, 
     });
 
     const heroContent = {
