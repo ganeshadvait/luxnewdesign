@@ -63,8 +63,8 @@ export default function Second() {
                     <div className="relative w-full h-45">
                     {showImages && (
                 <Image
-                    src="/your-image.png"
-                    alt="Delayed Image"
+                src={service.image} 
+                alt={service.title} 
                     layout="fill"
                     objectFit="cover"
                     className="rounded-t-lg fade-in"
