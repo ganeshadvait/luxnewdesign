@@ -58,7 +58,7 @@ export default function Second() {
                             layout="fill" 
                             objectFit="cover" 
                             priority
-                            className={`rounded-t-lg ${inView ? "fade-in" : "opacity-0"}`}
+                            className="rounded-t-lg"
                         />
                     </div>
                     <div className="p-4 flex content_Card">
