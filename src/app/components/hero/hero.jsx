@@ -22,9 +22,11 @@ export default function Hero () {
     }
     return (
         <>
-        <section className='hero_section'>
-        <h1
+        <section
         ref={ref}
+        className={`hero_section ${inView ? "fade-in" : "opacity-0"}`}>
+        <h1
+        
      className={`hero_title ${inView ? "fade-in" : "opacity-0"}`}>{heroContent.title}</h1>  
            <div className='hero_content flex flex-wrap'>
             <div className="left_hero">                 
