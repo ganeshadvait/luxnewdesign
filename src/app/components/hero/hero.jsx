@@ -30,16 +30,16 @@ export default function Hero () {
      className="fade-up hero_title font-500">{heroContent.title}</h1>  
            <div className='hero_content flex flex-wrap'>
             <div className="left_hero">                 
-                <Image src={heroContent.heroImage} alt="Lazy loaded"  className={`logo-fade hero_image ${inView ? "fade-in" : "opacity-0"}`} fill />                 
+                <Image ref={ref} src={heroContent.heroImage} alt="Lazy loaded"  className={`logo-fade hero_image ${inView ? "fade-in" : "opacity-0"}`} fill />                 
             </div>
-            <div className="right_hero" ref={ref}>
-            {inView && (
+            <div className="right_hero">
+            
                 <ul className='list_items_hero' lazyload="true" >
                 {heroContent.descList.map((desc, index) => (
                     <li className='list_item_hero' key={index}>{desc}</li>
                 ))}
             </ul>
-            )}
+          
             
             </div>
            </div>
