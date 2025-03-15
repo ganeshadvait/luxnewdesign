@@ -23,8 +23,8 @@ export default function Hero () {
     return (
         <>
         <section
-        ref={ref}
-        className={`hero_section ${inView ? "fade-in" : "opacity-0"}`}>
+    
+        className= "hero_section">
         <h1
         
      className="fade-up hero_title">{heroContent.title}</h1>  
