@@ -55,9 +55,10 @@ h1, h2, h3, h4, h5, h6, p, a, button {
 p, span{
   font-family: 'Parkinsans', sans-serif; 
 }
-ul{
+ul, tbody, th, table{
   font-family: 'Parkinsans', sans-serif;
 }
+
 .fade-in {
   opacity: 1;
   transition: opacity 0.5s ease-in;

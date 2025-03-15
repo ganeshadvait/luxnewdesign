@@ -23,8 +23,10 @@ export default function HospitalLocation() {
     
       </div>
       <div className="leftl-lright">
-      <div className="p-6 lg:w-2/3">
-          <h3 className="text-lg font-500 text-gray-900">
+      <div
+      ref={ref}
+      className="p-6 lg:w-2/3">
+          <h3 className= {` text-lg font-500 text-gray-900 ${inView ? "fade-in": "opcacity-0"}`}>
             LUX Hospitals - Colorectal | Surgical GI | Urology | Gynecology |
             Plastic Surgery | ENT | Orthopaedics
           </h3>

@@ -57,7 +57,7 @@ export default function Second() {
                             alt={service.title} 
                             layout="fill" 
                             objectFit="cover" 
-                            priorityq
+                            priority
                             className={`rounded-t-lg ${inView ? "fade-in" : "opacity-0"}`}
                         />
                     </div>
