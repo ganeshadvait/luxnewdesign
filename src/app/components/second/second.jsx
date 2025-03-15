@@ -50,8 +50,7 @@ export default function Second() {
                     <Image 
     src={service.image} 
     alt={service.title} 
-    width={300} 
-    height={200} 
+    layout="fill" 
     objectFit="cover"
     className="rounded-t-lg"
     priority={index === 0} 
