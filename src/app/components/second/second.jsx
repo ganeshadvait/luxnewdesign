@@ -49,8 +49,8 @@ export default function Second() {
 
     return (
         <section
-        ref={ref}
-        className= {`second_section grid grid-cols-2 md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 fade-in ${inView ? "fade-in" : "opacity-0"}`}>
+        
+        className= "second_section grid grid-cols-2 md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 fade-in">
             {services.map((service, index) => (
                 <div key={index}
                 ref={ref}
