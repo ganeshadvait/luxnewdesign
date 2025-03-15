@@ -49,10 +49,10 @@ export default function Second() {
             {services.map((service, index) => (
                 <div key={index} className={`sessioncards rounded-xl overflow-hidden shadow-lg ${service.bgColor} `}>
                     <div
-                    ref={ref}
-                    className= {`relative w-full h-45 ${inView ? "fade-in" : "opacity-0"}`}>
+                   
+                    className=  "relative w-full h-45">
                         <Image 
-                        ref={ref}
+                    
                             src={service.image} 
                             alt={service.title} 
                             layout="fill" 
