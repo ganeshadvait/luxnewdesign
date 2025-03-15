@@ -11,8 +11,8 @@ export default function Header() {
             
             <div className="header__logos" ref={ref}>
                 <a href="#"><img className={`logo-fade header__logo ${inView ? "fade-in" : "opacity-0"}`} src="/lux logo final .png" alt="logo"  width={140} height={60}/></a>
-    <a href="#"><img className={`logo-fade header__logotwo ${inView ? "fade-in" : "opacity-0"}`} src="/nabh.png" alt="logo" /></a>
-    <a href="#"><img className={`logo-fade header__logothree ${inView ? "fade-in" : "opacity-0"}`} src="/trail.png" alt="logo" /></a>
+    <a href="#"><img className={`logo-fade header__logotwo ${inView ? "fade-in" : "opacity-0"}`} src="/ISO.svg" alt="logo" /></a>
+    <a href="#"><img className={`logo-fade header__logothree ${inView ? "fade-in" : "opacity-0"}`} src="/TRAIL.svg" alt="logo" /></a>
             </div>
 
            
