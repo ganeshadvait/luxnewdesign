@@ -39,13 +39,7 @@ export default function Second() {
             arrow: "/Arrow.svg"
         }
     ];
-    const [showImages, setShowImages] = useState(false);
-
-    useEffect(() => {
-        if (inView) {
-            setShowImages(true);
-        }
-    }, [inView]);
+    
 
     return (
         <section
@@ -53,23 +47,21 @@ export default function Second() {
         className= "second_section grid grid-cols-2 md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 fade-in">
             {services.map((service, index) => (
                 <div key={index}
-                ref={ref}
-                className={`sessioncards rounded-xl overflow-hidden shadow-lg ${service.bgColor} transition-opacity duration-700 ease-out 
-            ${inView ? `opacity-100 delay-${index * 200}` : "opacity-0"}`}>
+                
+                className="sessioncards rounded-xl overflow-hidden shadow-lg">
                     <div className="relative w-full h-45">
-                    {showImages && (
+                    
                 <Image
-                ref={ref}
+           
                 src={service.image} 
                 alt={service.title} 
                     layout="fill"
                     objectFit="cover"
-                    className="rounded-t-lg fade-in"
+                    className="rounded-t-lg"
                     priority // Forces early load
-    fetchPriority="high" // Tells browser to load ASAP
-    loading="eager"
+    
                 />
-            )}
+            
 
                     </div>
                     <div className="p-4 flex content_Card">
